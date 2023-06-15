@@ -1,11 +1,10 @@
-// const { test } = require("node:test");
 const { mean, mode, median } = require("./helpers");
 
 describe("mean", function () {
   test("finds the mean of an array of numbers", function () {
-    let nums = [1, 2, 3, 4, 5];
+    const nums = [1, 2, 3, 4, 5];
     expect(mean(nums)).toEqual(3);
-    let nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     expect(mean(nums2)).toEqual(5);
   });
   test("finds the mean of an array with negative numbers", function () {
@@ -20,17 +19,17 @@ describe("mean", function () {
 
 describe("median", function () {
   test("finds the median of an array of numbers", function () {
-    let nums = [1, 2, 3, 4, 5];
+    const nums = [1, 2, 3, 4, 5];
     expect(median(nums)).toEqual(3);
-    let nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     expect(median(nums2)).toEqual(5);
   });
   test("finds the median of an array with negative numbers", function () {
-    let nums = [-1, 2, 3, 4, 5];
+    const nums = [-1, 2, 3, 4, 5];
     expect(median(nums)).toEqual(3);
   });
   test("finds the median of an array with decimal numbers", function () {
-    let nums = [1.5, 2.5, 3.5, 4.5, 5.5];
+    const nums = [1.5, 2.5, 3.5, 4.5, 5.5];
     expect(median(nums)).toBeCloseTo(3.5);
   });
 });
